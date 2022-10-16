@@ -36,13 +36,14 @@ public class Salary {
         }
 
         public static int averageSalary(Employee[] employees) {
-
+        int employeeCount = 0;
         int salaryAverage = 0;
         int sum = 0;
             for (int i = 0; i < employees.length; i++) {
                     sum = sum + employees[i].getSalary();
+                    employeeCount++;
             }
-            salaryAverage = sum / employees.length;
+            salaryAverage = sum / employeeCount;
 
             System.out.println("Average salary of employees: " + salaryAverage + " ");
             return salaryAverage;
